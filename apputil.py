@@ -22,3 +22,10 @@ def ways(cents, coin_types=[1, 5]):
         for i in range(coin, cents + 1):
             dp[i] += dp[i - coin]
     return dp[cents]
+
+#test cases
+print(ways(12))           
+print(ways(20))           
+print(ways(3))            
+print(ways(0))             
+print(ways(100, [25, 10, 5, 1]))
