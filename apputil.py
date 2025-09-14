@@ -29,3 +29,15 @@ print(ways(20))
 print(ways(3))            
 print(ways(0))             
 print(ways(100, [25, 10, 5, 1]))
+
+def lowest_score(names, scores):
+    return names[np.argmin(scores)]
+
+def sort_names(names, scores):
+    return names[np.argsort(scores)[::-1]]
+
+scores = np.array([99, 71, 85, 62, 91])
+names = np.array(['Lucas', 'Ethan', 'Peter', 'Tyler', 'Cobey'])
+
+print("Lowest score:", lowest_score(names, scores))
+print("Names sorted by score:", sort_names(names, scores))
